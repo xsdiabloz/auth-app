@@ -53,11 +53,11 @@ class authController {
       const { userName, password } = req.body;
       const user = await User.findOne({ userName });
       if (!user) {
-        return res.status(402).json({ message: "User not found" });
+        return res.status(400).json({ message: "User not found" });
       }
       const validPassword = bcrypt.compareSync(password, user.password);
       if (!validPassword) {
-        return res.status(402).json({ message: "Invalid password" });
+        return res.status(400).json({ message: "Invalid password" });
       }
       const token = generateToken(user._id.toString(), user.roles);
       return res.json({ token });
