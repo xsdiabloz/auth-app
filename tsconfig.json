@@ -1,22 +1,16 @@
 {
-
   "compilerOptions": {
- 
     "module": "nodenext",
+    "moduleResolution": "nodenext",
     "target": "esnext",
     "types": [],
-
-
-   
     "sourceMap": true,
     "declaration": true,
+    "esModuleInterop": true,
     "declarationMap": true,
-
-
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
-
-
+    "allowImportingTsExtensions": false,
     "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
